@@ -64,7 +64,7 @@ class AIEngine:
         try:
             genai.configure(api_key=api_key)
             self.model = genai.GenerativeModel(
-                model_name="gemini-2.0-flash",
+                model_name="gemini-2.5-flash",
                 system_instruction=SYSTEM_PROMPT,
             )
             self.is_configured = True

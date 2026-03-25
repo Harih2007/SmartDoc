@@ -21,7 +21,7 @@ from safety import SafetyGuard
 
 # ── App Setup ────────────────────────────────────────────────────────────────
 
-os.environ["GEMINI_API_KEY"] = "AIzaSyCiM4JMbAi9yI1cThLYz1LIMf4UDO9i1NI"
+os.environ["GEMINI_API_KEY"] = "AIzaSyANftl-PpzryNh9QilH6-Au6XxwBlS9rCs"
 
 app = FastAPI(
     title="SmartDoc",
