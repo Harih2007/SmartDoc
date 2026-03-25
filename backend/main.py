@@ -13,6 +13,7 @@ from typing import Optional
 from fastapi import FastAPI, UploadFile, File, HTTPException, Form, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from dotenv import load_dotenv
 
 from document_parser import DocumentParser
 from vector_store import VectorStore, vector_store
@@ -21,7 +22,7 @@ from safety import SafetyGuard
 
 # ── App Setup ────────────────────────────────────────────────────────────────
 
-os.environ["GEMINI_API_KEY"] = "AIzaSyANftl-PpzryNh9QilH6-Au6XxwBlS9rCs"
+load_dotenv()
 
 app = FastAPI(
     title="SmartDoc",
