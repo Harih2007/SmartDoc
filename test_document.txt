@@ -1,0 +1,21 @@
+SmartDoc AI - Product Overview
+
+SmartDoc AI is an intelligent document question-and-answer assistant designed for enterprise use. It allows users to upload documents in various formats including PDF, TXT, Markdown, and DOCX files.
+
+Key Features:
+1. Retrieval-Augmented Generation (RAG) - The system uses semantic search to find the most relevant sections of uploaded documents before generating responses.
+2. Safety Guardrails - All responses include confidence scores, source citations, and hallucination warnings to ensure responsible AI behavior.
+3. Multiple Format Support - Users can upload PDF, TXT, MD, and DOCX files up to 10MB in size.
+
+Architecture:
+The system consists of a FastAPI backend that handles document processing, vector search, and AI response generation. The frontend is built with React and Vite, featuring a modern dark glassmorphism design.
+
+The backend uses TF-IDF vectorization for document search, which provides fast and accurate retrieval without requiring external embedding models. Documents are chunked into approximately 500-character segments with 100-character overlap to ensure context is preserved.
+
+Safety Mechanisms:
+- Prompt injection detection prevents users from manipulating the AI's behavior
+- Response grounding ensures answers are based only on document content
+- Confidence scoring helps users assess the reliability of responses
+- Hallucination detection flags responses that may not be fully supported by source material
+
+The system is designed to be production-ready with proper error handling, CORS configuration, and a clean API design.
